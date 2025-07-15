@@ -1,0 +1,44 @@
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Student {
+    @Id
+    int age;
+    int marks;
+    String name;
+
+    void setAge(int age) {
+        this.age = age;
+    }
+
+    void setMarks(int marks) {
+        this.marks = marks;
+    }
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    int getMarks()
+    {
+        return marks;
+    }
+    String getName()
+    {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "age=" + age +
+                ", marks=" + marks +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
