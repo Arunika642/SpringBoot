@@ -1,0 +1,47 @@
+import jakarta.persistence.*;
+import org.hibernate.annotations.EmbeddedColumnNaming;
+
+@Entity // tells the hibernate about the entity class(class to be mapped in DB)
+@Table(name="alien_table") // changes the name of the table
+public class Alien {
+
+    @Id //@Primary key
+    int age;
+    @Column(name="alien") //changes the name of the Column
+    String name;
+    @Transient //skips this variable
+    String Tech;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTech() {
+        return Tech;
+    }
+
+    public void setTech(String tech) {
+        Tech = tech;
+    }
+
+    @Override
+    public String toString() {
+        return "Alien{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                ", Tech='" + Tech + '\'' +
+                '}';
+    }
+}
