@@ -1,0 +1,52 @@
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Alien {
+    @Id
+    private int aid;
+    private String aname;
+    private String Tech;
+    private Laptop laptop;
+
+    public void setId(int aid)
+    {
+        this.aid = aid;
+    }
+    public int getId()
+    {
+        return aid;
+    }
+
+    public String getAname() {
+        return aname;
+    }
+
+    public void setAname(String aname) {
+        this.aname = aname;
+    }
+
+    public String getTech() {
+        return Tech;
+    }
+
+    public void setTech(String tech) {
+        Tech = tech;
+    }
+
+    public void setLaptop(Laptop laptop)
+    {
+        this.laptop = laptop;
+    }
+
+    @Override
+    public String toString() {
+        return "Alien{" +
+                "aid=" + aid +
+                ", aname='" + aname + '\'' +
+                ", Tech='" + Tech + '\'' +
+                ", laptop=" + laptop +
+                '}';
+    }
+}
+
